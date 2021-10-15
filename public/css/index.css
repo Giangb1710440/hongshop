@@ -1,0 +1,21 @@
+.inner-header .logo a span{
+    color: deeppink;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+.inner-header .logo a .red{
+    color: black;
+}
+
+.hero-section .ten-logo p{
+    font-family: "Times New Roman";
+    color: black;
+}
+
+.btn btn-primary{
+    color: #fff;
+    background-color: deeppink;
+    border-color: deeppink;
+}
