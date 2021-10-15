@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 07, 2021 lúc 06:57 AM
--- Phiên bản máy phục vụ: 10.4.14-MariaDB
--- Phiên bản PHP: 7.3.22
+-- Thời gian đã tạo: Th10 15, 2021 lúc 05:02 AM
+-- Phiên bản máy phục vụ: 10.4.21-MariaDB
+-- Phiên bản PHP: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -223,7 +223,14 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `fullname`, `email`, `phone`, `address`, `created_at`, `updated_at`) VALUES
-(1, 'Nguyễn Văn A', 'nguyena@gmail.com', '0967356298', 'Ninh Kiều , Cần Thơ', '2020-11-16 07:12:19', '2020-11-16 07:12:19');
+(1, 'Nguyễn Văn A', 'nguyena@gmail.com', '0967356298', 'Ninh Kiều , Cần Thơ', '2020-11-16 07:12:19', '2020-11-16 07:12:19'),
+(5, NULL, NULL, NULL, NULL, '2021-10-14 00:14:56', '2021-10-14 00:14:56'),
+(6, NULL, NULL, NULL, NULL, '2021-10-14 00:26:10', '2021-10-14 00:26:10'),
+(7, NULL, NULL, NULL, NULL, '2021-10-14 10:20:00', '2021-10-14 10:20:00'),
+(8, 'nguyen ha giang', 'nhu@gmail.com', '0939337416', '3/2 ninh kieu can tho', '2021-10-14 10:36:15', '2021-10-14 10:36:15'),
+(9, 'nguyen ha giang', 'admin@gmail.com', '0939337416', '3/2 ninh kieu can tho', '2021-10-14 10:39:28', '2021-10-14 10:39:28'),
+(10, NULL, NULL, NULL, NULL, '2021-10-14 18:40:52', '2021-10-14 18:40:52'),
+(11, NULL, NULL, NULL, NULL, '2021-10-14 19:45:31', '2021-10-14 19:45:31');
 
 -- --------------------------------------------------------
 
@@ -630,7 +637,15 @@ INSERT INTO `orders` (`id`, `user_id`, `order_date`, `require_date`, `total_mone
 (10, 7, '2021-05-14', '2021-05-14', 500000, NULL, '2021-05-08 04:02:28', '2021-05-08 04:02:28', NULL),
 (11, 7, '2021-05-14', '2021-05-14', 250000, NULL, '2021-05-08 04:32:36', '2021-05-08 04:32:36', NULL),
 (12, 8, '2021-06-02', '2021-06-02', 1800000, NULL, '2021-05-27 00:24:50', '2021-05-27 00:24:50', NULL),
-(13, 7, '2021-06-08', '2021-06-08', 600000, 0, '2021-06-01 17:56:18', '2021-06-01 17:56:18', NULL);
+(13, 7, '2021-06-08', '2021-06-08', 600000, 0, '2021-06-01 17:56:18', '2021-06-01 17:56:18', NULL),
+(14, NULL, '2021-10-20', '2021-10-20', 300000, NULL, '2021-10-14 00:14:56', '2021-10-14 00:14:56', 5),
+(15, NULL, '2021-10-20', '2021-10-20', 300000, NULL, '2021-10-14 00:26:10', '2021-10-14 00:26:10', 6),
+(16, NULL, '2021-10-20', '2021-10-20', NULL, 3, '2021-10-14 10:20:00', '2021-10-14 10:20:00', 7),
+(17, 10, '2021-10-20', '2021-10-20', 500000, 3, '2021-10-14 10:24:24', '2021-10-14 10:24:24', NULL),
+(18, NULL, '2021-10-20', '2021-10-20', 500000, NULL, '2021-10-14 10:36:15', '2021-10-14 10:36:15', 8),
+(19, NULL, '2021-10-20', '2021-10-20', 250000, NULL, '2021-10-14 10:39:28', '2021-10-14 10:39:28', 9),
+(20, NULL, '2021-10-21', '2021-10-21', 500000, 3, '2021-10-14 18:40:52', '2021-10-14 18:40:52', 10),
+(21, NULL, '2021-10-21', '2021-10-21', 170000, 3, '2021-10-14 19:45:31', '2021-10-14 19:45:31', 11);
 
 -- --------------------------------------------------------
 
@@ -672,7 +687,16 @@ INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `quantity`, `price`
 (17, 12, 7, 1, 250000, '2021-05-27 00:24:50', '2021-05-27 00:24:50'),
 (18, 12, 10, 1, 300000, '2021-05-27 00:24:50', '2021-05-27 00:24:50'),
 (19, 12, 4, 1, 500000, '2021-05-27 00:24:50', '2021-05-27 00:24:50'),
-(20, 13, 10, 2, 300000, '2021-06-01 17:56:18', '2021-06-01 17:56:18');
+(20, 13, 10, 2, 300000, '2021-06-01 17:56:18', '2021-06-01 17:56:18'),
+(21, 14, 3, 1, 300000, '2021-10-14 00:14:56', '2021-10-14 00:14:56'),
+(22, 15, 3, 1, 300000, '2021-10-14 00:26:10', '2021-10-14 00:26:10'),
+(23, 16, 3, 1, 300000, '2021-10-14 10:20:00', '2021-10-14 10:20:00'),
+(24, 16, 4, 2, 500000, '2021-10-14 10:20:00', '2021-10-14 10:20:00'),
+(25, 17, 4, 1, 500000, '2021-10-14 10:24:24', '2021-10-14 10:24:24'),
+(26, 18, 4, 1, 500000, '2021-10-14 10:36:15', '2021-10-14 10:36:15'),
+(27, 19, 2, 1, 250000, '2021-10-14 10:39:28', '2021-10-14 10:39:28'),
+(28, 20, 21, 1, 500000, '2021-10-14 18:40:52', '2021-10-14 18:40:52'),
+(29, 21, 36, 1, 170000, '2021-10-14 19:45:31', '2021-10-14 19:45:31');
 
 -- --------------------------------------------------------
 
@@ -1338,7 +1362,8 @@ INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified
 (6, 2, 'HuynhNet', 'huynhnet27@gmail.com', 'mua.jpg', NULL, '$2y$10$Dhvy/.IvBrXztKqq1rO72uhZJdBnhp6HZIg.QdoZy8OgXqIOYYMbK', NULL, NULL, '2021-04-13 08:19:41', '2021-05-07 09:13:55', '2021-03-30', '0859134539', 'Cà Mau'),
 (7, 2, 'thao le', 'thaole@gmail.com', 'users/default.png', NULL, '$2y$10$mI5H7TgKFXsZ4iuqGGO2k.uWNXVW48YvXdxL1aYyieLSScjDCHB1y', NULL, NULL, '2021-05-08 04:00:07', '2021-05-08 04:00:07', '2006-06-25', '0379558157', 'dong thap'),
 (8, 2, 'thanhthu', 'nguyen.thai.thanh.thu@gmail.com', 'hh.jpg', NULL, '$2y$10$rNxNko/szJDqR1mo6igkEeCtyuB.zcL5jmXIHxIxGvJ2d8E2hKfpa', NULL, NULL, '2021-05-27 00:21:39', '2021-05-27 00:25:52', '1999-08-20', '0363360425', 'đường ngu sao chỉ, ap hoi làm chi'),
-(9, 2, 'le hong', 'hong123@gmail.com', 'users/default.png', NULL, '$2y$10$vOHZCOKu.iev9ZPXq/2dIe1Ce5N9qA/h4tQLwzT.r8rEyQzJJimEa', NULL, NULL, '2021-09-23 23:00:59', '2021-09-23 23:00:59', '2021-04-08', '0387194390', 'dong thap');
+(9, 2, 'le hong', 'hong123@gmail.com', 'users/default.png', NULL, '$2y$10$vOHZCOKu.iev9ZPXq/2dIe1Ce5N9qA/h4tQLwzT.r8rEyQzJJimEa', NULL, NULL, '2021-09-23 23:00:59', '2021-09-23 23:00:59', '2021-04-08', '0387194390', 'dong thap'),
+(10, 1, 'Nguyễn Hà Giang', 'giang@gmail.com', 'users/default.png', NULL, '$2y$10$AmwYjd2c.Bwsj4CZfMAtu.K/sqibeGZS4jGXrh7sQQVAlJgJEEwgq', NULL, NULL, '2021-10-13 20:37:16', '2021-10-13 20:37:16', '1999-12-09', '0939337416', 'Cần thơ');
 
 -- --------------------------------------------------------
 
@@ -1573,7 +1598,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT cho bảng `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `data_rows`
@@ -1621,13 +1646,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT cho bảng `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT cho bảng `pages`
@@ -1693,7 +1718,7 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
