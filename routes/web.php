@@ -45,6 +45,7 @@ Route::get('search-product', [HomeController::class, 'searchProduct'])->name('se
 
 Route::get('view-category/{categoryId}', [HomeController::class, 'viewCategory'])->name('viewCategory');
 Route::get('product-category/{id_cate}',[HomeController::class, 'viewCate_product'])->name('viewCate_product');
+Route::get('page-store',[HomeController::class, 'page_store'])->name('page_store');
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('browse-order/{id}', [HomeController::class, 'browseOrder'])->name('browseOrder');

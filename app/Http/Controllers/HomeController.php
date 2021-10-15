@@ -409,6 +409,13 @@ class HomeController extends Controller
             'cate' => $cate
         ]);
     }
+    public function page_store(){
+        $products = DB::table('products')->get();
+
+        return view('customer.page_store')->with([
+            'products' => $products
+        ]);
+    }
 
 
 

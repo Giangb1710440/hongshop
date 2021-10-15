@@ -164,9 +164,9 @@
         <div class="container">
             <nav class="nav-menu mobile-menu">
                 <ul>
-                    <i class="fa fa-home"></i>
-                    <li class="active"><a href="{{ url('/') }}">Trang chủ</a></li>
-                    <li><a href="">Cửa hàng</a></li>
+
+                    <li class="active"><a href="{{ url('/') }}"><i class="fa fa-home fa-2x"></i> Trang chủ</a></li>
+                    <li><a href="{{route('page_store')}}">Cửa hàng</a></li>
                     <li><a href="#">Sản phẩm <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                         <ul class="dropdown" style="width: 204px">
                             <li><a href="{{route('viewCate_product',2)}}">Giày Nam</a></li>
