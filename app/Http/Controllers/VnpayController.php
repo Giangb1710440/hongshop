@@ -18,7 +18,7 @@ class VnpayController extends Controller
         $vnp_TmnCode = "UDOPNWS1"; //Mã website tại VNPAY
         $vnp_HashSecret = "EBAHADUGCOEWYXCMYZRMTMLSHGKNRPBN"; //Chuỗi bí mật
         $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-        $vnp_Returnurl = "http://localhost/hongshop/return-page-vnpay-checkout";
+        $vnp_Returnurl = "http://localhost/cooperative.com.vn/return-page-vnpay-checkout";
         $vnp_TxnRef = date("YmdHis"); //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
         $vnp_OrderInfo = $request->input('order_desc');//noi dung thanh toan
         $vnp_OrderType = 200000; //ma loai san pham thanh toan
@@ -75,7 +75,6 @@ class VnpayController extends Controller
             Session()->put('address_c',$request->input('txt_billing_addr1'));
         }else{
             Session()->put('isset_id_user',Auth::user()->id);
-
         }
 
         return redirect($vnp_Url);
